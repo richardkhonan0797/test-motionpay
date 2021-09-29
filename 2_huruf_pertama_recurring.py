@@ -3,13 +3,13 @@ from typing import List, Union
 
 def huruf_pertama_recurring(chars: List[str]) -> Union[str, bool]:
 
-    previous_chars = {}
+    previous_chars = []
 
     for char in chars:
         if char in previous_chars:
             return char
         else:
-            previous_chars[char] = char
+            previous_chars.append(char)
 
     return False
 
